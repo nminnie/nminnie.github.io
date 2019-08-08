@@ -678,7 +678,7 @@ ul.social-buttons {
 }
 
 ul.social-buttons li a {
-  font-size: 30px;
+  font-size: 40px;
   line-height: 70px;
   display: block;
   width: 70px;
@@ -688,8 +688,7 @@ ul.social-buttons li a {
   color: white;
   border-radius: 100%;
   outline: none;
-  /* background-color: #212529; */
-  background-color: #fed136;
+  background-color: #F7C703;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
