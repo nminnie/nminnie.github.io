@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Public Amenities NYC</title>
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.2/papaparse.min.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 70%;
+        float: right;
+      }
+      #sidebar{
+        height: 100%;
+        width: 30%;
+        padding-top: 5%;
+        float: left;
+        background-color: #DD861F;
+      }
+      #controlPanel{
+          visibility: hidden;
+          padding-left: 7%;
+      }
+      #localization{
+        text-align: center;
+      }
+      #gps{
+          padding-top: 50px;
+          width: 150px;
+          height: 170px;
+      }
+      h2 {
+          color: #17263C;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Poppins';font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="sidebar">
+        <div id="localization">
+            <h2 vertical-align="center"><b>LOCATE ME</b></h2>
+            <svg id="gps" onmouseover="hoverOn()" onmouseout="hoverOff()" onclick="loadControls()" aria-hidden="true" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#17263C" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>        </div>
+        <div id="controlPanel">
+            <h2>
+                PUBLIC AMENITIES
+            </h2>
+            <h2>
+                I want to find...
+            </h2>
+            <p>
+                <input type="checkbox" class="option" id="garbage" onclick="showBin()">Garbage Cans</input><br/>
+                <input type="checkbox" class="option" id="recycling" onclick="showRecycle()">Recycling Bins</input><br/>
+                <input type="checkbox" class="option" id="compost" onclick="showFood()">Food Waste Disposal</input><br/>
+                <input type="checkbox" class="option" id="electronic" onclick="showElectronics()">Electronics Disposal</input><br/>
+                <input type="checkbox" class="option" id="bathroom" onclick="showRestroom()">Public Bathrooms</input><br/>
+            </p>
+            <h2>
+                ...nearest me
+            </h2>
+        </div>
+    </div>
+    <script type="text/javascript" src="Trashy.js">
+    </script>
+    <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAia5HYjrzapWSLPq0MrbtVDcKWteCR4Nw&callback=initMap" async defer>
+    </script>
+  </body>
+</html>
