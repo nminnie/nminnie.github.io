@@ -119,7 +119,7 @@
 
           <!-- Project 2: Price Prediction -->
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a href="https://nbviewer.jupyter.org/github/nminnie/Prices-prediction/blob/master/price_forecasting.ipynb">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                 </div>
@@ -258,6 +258,7 @@
                   <!-- Project Details Go Here -->
                   <h4 class="text-uppercase">Recommendation System for Books</h4>
                   <p>Click <a href="https://nbviewer.jupyter.org/github/nminnie/Books-recommender/blob/master/goodreads_recommendations.ipynb">here</a> to view the full notebook</p>
+                  <p><b>Dataset</b></p>
                   <p><b>Approach:</b> Collaborate filtering makes book recommendations for a user based on how other users rate books.</p>
                   <p><b>Feature engineering:</b> The data is converted as a sparse matrix of ratings, in which each column is a user and each row is a book. Every entry in the matrix is a rating score.</p>
                   <p><b>Algorithm:</b> kNN finds the closest book vectors, with cosine similarity as the distance metric.</p>
@@ -270,6 +271,62 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"></div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h3 class="text-uppercase">Analyze and Predict Avocado Prices</h4>
+                    <p>Click <a href="https://nbviewer.jupyter.org/github/nminnie/Prices-prediction/blob/master/price_forecasting.ipynb">here</a> to view the full notebook</p>
+                    <p><b>Dataset:</b> Average price for avocadoes in 52 regions in the US, recorded on a weekly basis from 2015 to 2018. 
+                      <a href="https://www.kaggle.com/neuromusic/avocado-prices">(Kaggle link)</a></p>
+
+                    <h5>1. Organic vs. Regular Prices</h5>
+                    <ul>
+                      <li>Generally, organic and conventional avocado prices have similar fluctuations.</li>
+                      <li>There is a sudden drop in organic prices in August 2015.</li>
+                    </ul>
+                    <img class="img-fluid d-block mx-auto" src="img/modal/avocado-prices/organic.png" alt=""></p>
+
+                    <h5>2. Regional Prices</h5>
+                    <ul>
+                      <li>Prices in different regions vary, but follow a similar trend.</li>
+                      <li>New York has the highest prices, while Dallas has the lowest.</li>
+                    </ul>
+                    <img class="img-fluid d-block mx-auto" src="img/modal/avocado-prices/regions.png" alt=""></p>
+
+                    <h5>3. Seasonality and Trend</h5>
+                    <ul>
+                      <li>The fluctuations in price is seasonal.</li>
+                      <li>The overall trend in price is increasing.</li>
+                    </ul>
+                    <img class="img-fluid d-block mx-auto" src="img/modal/avocado-prices/seasonality.png" alt=""></p>
+
+                    <h5>4. Predicted Prices vs. Real Prices</h5>
+                    <p>The predicted prices are not exactly the same, but follow the same upward and downward trends of the true prices. The MSE here is $0.01622.</p>
+                    <img class="img-fluid d-block mx-auto" src="img/modal/avocado-prices/forecast.png" alt=""></p>
+
+                    <h5>5. Predict Future Prices</h5>
+                    <p>The prices predicted by the model capture both the seasonality and the overall increasing trend of the price values.</p>
+                    <img class="img-fluid d-block mx-auto" src="img/modal/avocado-prices/future.png" alt=""></p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Modal 8 -->
     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
