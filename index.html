@@ -64,9 +64,10 @@
                 <span class="text-primary">Nguyen</span>
               </h1>
               <div class="subheading mb-4">Data Scientist - Montreal, Canada</div>
-              <p class="lead mb-4">Hi there! I'm a data scientist, currently working on the NLU model that powers 
-                <br> the conversational intelligence of virtual assistants at <a href="https://dynamicly.com/">Dynamicly</a>.
-                <br>I love math, data, and penguins.</p>
+              <p class="lead mb-4">Some facts about me...</p>
+              <p class="lead mb-4">I love math and data. I like penguins. I'm always learning.
+                <br>At the moment, I'm learning Mandarin and multi-label classification.
+              </p>
               <p class="lead mb-4"><a style="font-size: 22px" href="Resume.pdf">View my resume</a></p>
 
               <ul class="list-inline social-buttons">
@@ -103,7 +104,7 @@
 
           <!-- Project 1: Books Recommendations -->
           <div class="col-md-4 col-sm-6 portfolio-item">
-            <a href="https://nbviewer.jupyter.org/github/nminnie/Books-recommender/blob/master/goodreads_recommendations.ipynb">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                 </div>
@@ -240,6 +241,35 @@
     <footer>
       <span class="copyright">Based on template by Start Bootstrap</span>
     </footer>
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h4 class="text-uppercase">Recommendation System for Books</h4>
+                  <p>Click <a href="https://nbviewer.jupyter.org/github/nminnie/Books-recommender/blob/master/goodreads_recommendations.ipynb">here</a> to view the full notebook</p>
+                  <p><b>Approach:</b> Collaborate filtering makes book recommendations for a user based on how other users rate books.</p>
+                  <p><b>Feature engineering:</b> The data is converted as a sparse matrix of ratings, in which each column is a user and each row is a book. Every entry in the matrix is a rating score.</p>
+                  <p><b>Algorithm:</b> kNN finds the closest book vectors, with cosine similarity as the distance metric.</p>
+                  <p><b>Sample recommendation results:</b>
+                  <img class="img-fluid d-block mx-auto" src="img/modal/book-recommendations.PNG" alt=""></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal 8 -->
     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
